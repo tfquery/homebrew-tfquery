@@ -11,7 +11,7 @@ class Tfquery < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/tfquery/homebrew-tfquery/releases/download/v2.0.0/tfquery_2.0.0_darwin_x86_64.tar.gz"
-      sha256 "6e02d4cedf32cfd806759984a332c20e7360edd12ba00e76b68d240f5e359539"
+      sha256 "1ab8fe8e345d771b20660d7b2b7e0a8c27b4bce894022c461ef5f804b4266d87"
 
       define_method(:install) do
         bin.install "tfquery"
@@ -20,7 +20,7 @@ class Tfquery < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/tfquery/homebrew-tfquery/releases/download/v2.0.0/tfquery_2.0.0_darwin_arm64.tar.gz"
-      sha256 "6ea4088f4ee3e87820fddf2e1c3838b4403c7f6e89f7f8f713fd068bc949e6d5"
+      sha256 "fa43a8c7d26d8e37392b243aa3dd44e33f5af0983f9ae22dc71c879f6673ecc3"
 
       define_method(:install) do
         bin.install "tfquery"
@@ -32,7 +32,7 @@ class Tfquery < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/tfquery/homebrew-tfquery/releases/download/v2.0.0/tfquery_2.0.0_linux_x86_64.tar.gz"
-      sha256 "c594fecfcf7b91e505d868671cf8ae03c37bc417c0f28e57892d991fbdf36373"
+      sha256 "9c491ce5be96fd203ebe60b96530c69b4767c2dafccba374b18f8f8a6c70280a"
       define_method(:install) do
         bin.install "tfquery"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
@@ -40,7 +40,7 @@ class Tfquery < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/tfquery/homebrew-tfquery/releases/download/v2.0.0/tfquery_2.0.0_linux_arm64.tar.gz"
-      sha256 "e671ccaa2921639262b1425aec9d13111d54afaf5aaed8f2e5e1933271f16266"
+      sha256 "b1fc1caae168762dc38bce79ef8771dcfa89ab3816335e051a29fb478e7afe4b"
       define_method(:install) do
         bin.install "tfquery"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
