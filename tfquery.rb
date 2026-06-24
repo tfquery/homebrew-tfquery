@@ -5,13 +5,13 @@
 class Tfquery < Formula
   desc "CLI to query Terraform/OpenTofu state across backends"
   homepage "https://github.com/tfquery/tfquery"
-  version "2.0.0"
+  version "1.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tfquery/homebrew-tfquery/releases/download/v2.0.0/tfquery_2.0.0_darwin_x86_64.tar.gz"
-      sha256 "1ab8fe8e345d771b20660d7b2b7e0a8c27b4bce894022c461ef5f804b4266d87"
+      url "https://github.com/tfquery/homebrew-tfquery/releases/download/v1.6.0/tfquery_1.6.0_darwin_x86_64.tar.gz"
+      sha256 "8fe965dfbea5672f8c7035c80f854a2c7fbf5fb6551179bc6f3ba41beb6ea681"
 
       define_method(:install) do
         bin.install "tfquery"
@@ -19,8 +19,8 @@ class Tfquery < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tfquery/homebrew-tfquery/releases/download/v2.0.0/tfquery_2.0.0_darwin_arm64.tar.gz"
-      sha256 "fa43a8c7d26d8e37392b243aa3dd44e33f5af0983f9ae22dc71c879f6673ecc3"
+      url "https://github.com/tfquery/homebrew-tfquery/releases/download/v1.6.0/tfquery_1.6.0_darwin_arm64.tar.gz"
+      sha256 "1074c18ec41e068e03b40e06291a41982e92cc75b751cd68ade583a7c0e66ed5"
 
       define_method(:install) do
         bin.install "tfquery"
@@ -31,16 +31,16 @@ class Tfquery < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfquery/homebrew-tfquery/releases/download/v2.0.0/tfquery_2.0.0_linux_x86_64.tar.gz"
-      sha256 "9c491ce5be96fd203ebe60b96530c69b4767c2dafccba374b18f8f8a6c70280a"
+      url "https://github.com/tfquery/homebrew-tfquery/releases/download/v1.6.0/tfquery_1.6.0_linux_x86_64.tar.gz"
+      sha256 "18cace35e59c0882b7c6e320775d42f07d6d32337b2f2b9d4a5874e8790620db"
       define_method(:install) do
         bin.install "tfquery"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfquery/homebrew-tfquery/releases/download/v2.0.0/tfquery_2.0.0_linux_arm64.tar.gz"
-      sha256 "b1fc1caae168762dc38bce79ef8771dcfa89ab3816335e051a29fb478e7afe4b"
+      url "https://github.com/tfquery/homebrew-tfquery/releases/download/v1.6.0/tfquery_1.6.0_linux_arm64.tar.gz"
+      sha256 "fe071d20ff44adef6fe8e8d2b5913c1564956d5a1c83789a10ddbb3aa23b0f70"
       define_method(:install) do
         bin.install "tfquery"
         man1.install Dir["docs/man/share/man1/*"] if File.directory?("docs/man/share/man1")
